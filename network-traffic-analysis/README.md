@@ -40,10 +40,15 @@ Capture and analyze live network traffic using Wireshark. Apply filters to extra
 ---
 
 ## 📸 Screenshots
-*(Include your screenshots here using Markdown syntax below)*
 
-```markdown
-![DNS Query Screenshot](./screenshots/dns-query.png)
-![ICMP Packet Screenshot](./screenshots/icmp-ping.png)
+### DNS Query
+![DNS Query](./screenshots/dns-query.png)
 
+### TCP SYN Packet
+![TCP SYN](./screenshots/syn-packet.png)
 
+### ICMP Ping
+![ICMP Ping](./screenshots/icmp-ping.png)
+
+### Protocol Hierarchy
+![Protocol Breakdown](./screenshots/protocol-hierarchy.png)
