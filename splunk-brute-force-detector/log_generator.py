@@ -1,73 +1,45 @@
-#!/usr/bin/env python3
-"""
-log_generator.py
-
-Simulates login activity and outputs to CSV for use in Splunk or SIEM projects.
-
-Features:
-- Generates realistic login attempts (successes and failures)
-- Includes fields: timestamp, username, src_ip, status, location, device
-- Supports CLI arguments to customize output
-"""
-
-import csv
+import pandas as pd
 import random
-import argparse
-import logging
+from faker import Faker
 from datetime import datetime, timedelta
 
-# Setup logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='[%(asctime)s] %(levelname)s: %(message)s',
-    datefmt='%Y-%m-%d %H:%M:%S'
-)
+fake = Faker()
+logs = []
 
-# Sample data pools
-usernames = ['admin', 'msmith', 'jdoe', 'hacker01']
-devices = ['Windows10', 'Ubuntu', 'macOS']
-locations = ['US', 'RU', 'CN', 'DE']
-statuses = ['success', 'failure']
+# Set up user base
+users = [fake.user_name() for _ in range(50)]
+normal_ips = [fake.ipv4_public() for _ in range(25)]
+attack_ip = fake.ipv4_public()  # One malicious IP
 
-def generate_logs(count):
-    """Generates a list of simulated login event dictionaries."""
-    logs = []
-    base_time = datetime.now()
+# Generate normal login events
+for _ in range(850):
+    logs.append({
+        "timestamp": (datetime.now() - timedelta(minutes=random.randint(0, 1440))).strftime('%Y-%m-%d %H:%M:%S'),
+        "username": random.choice(users),
+        "src_ip": random.choice(normal_ips),
+        "status": random.choices(["success", "failure"], weights=[0.9, 0.1])[0],
+        "location": fake.city(),
+        "device": fake.user_agent()
+    })
 
-    for _ in range(count):
-        timestamp = base_time - timedelta(minutes=random.randint(1, 120))
-        entry = {
-            'timestamp': timestamp.isoformat(),
-            'username': random.choice(usernames),
-            'src_ip': f"192.168.1.{random.randint(2, 99)}",
-            'status': random.choices(statuses, weights=[0.7, 0.3])[0],
-            'location': random.choice(locations),
-            'device': random.choice(devices),
-        }
-        logs.append(entry)
+# Simulate brute-force attack from attacker IP
+attacker_username_pool = [fake.user_name() for _ in range(10)]
+for _ in range(150):
+    logs.append({
+        "timestamp": (datetime.now() - timedelta(minutes=random.randint(0, 60))).strftime('%Y-%m-%d %H:%M:%S'),
+        "username": random.choice(attacker_username_pool),
+        "src_ip": attack_ip,
+        "status": "failure",
+        "location": fake.city(),
+        "device": fake.user_agent()
+    })
 
-    return logs
+# Shuffle the list to randomize event order
+random.shuffle(logs)
 
-def write_csv(logs, output_file):
-    """Writes a list of login events to a CSV file."""
-    fieldnames = ['timestamp', 'username', 'src_ip', 'status', 'location', 'device']
-    with open(output_file, mode='w', newline='') as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
-        writer.writeheader()
-        writer.writerows(logs)
-    logging.info(f"{len(logs)} log entries written to {output_file}")
+# Save to CSV
+df = pd.DataFrame(logs)
+df.to_csv("sample_logs.csv", index=False)
 
-def main():
-    parser = argparse.ArgumentParser(description="Simulate login logs for brute-force detection.")
-    parser.add_argument('--count', type=int, default=50, help='Number of log entries to generate')
-    parser.add_argument('--output', type=str, default='sample_logs.csv', help='Output CSV file name')
+print("✅ Generated 1000 login events (normal + brute force) and saved to sample_logs.csv")
 
-    args = parser.parse_args()
-
-    logging.info(f"Generating {args.count} simulated login logs...")
-    logs = generate_logs(args.count)
-    write_csv(logs, args.output)
-    logging.info("Done.")
-
-if __name__ == '__main__':
-    main()
