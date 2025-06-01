@@ -154,7 +154,7 @@ pip install -r requirements.txt
 
 ## 📄 License
 
-MIT License – free to use, modify, and share.
+[MIT License](./LICENSE) – free to use, modify, and share.
 
 ---
 
