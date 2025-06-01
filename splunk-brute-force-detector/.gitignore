@@ -1,0 +1,29 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+
+# Packet capture files
+*.pcapng
+
+# Temporary files
+*.tmp
+*.swp
+
+# macOS and Linux system files
+.DS_Store
+
+# Windows system files
+*.log
+Thumbs.db
+
+# Python virtual environments
+venv/
+.venv/
+.env/
+
+# CSV log exports
+*.csv
+
+# VS Code settings (optional)
+.vscode/
