@@ -47,10 +47,6 @@ Creates a CSV file of 1000 login events with:
 
 ### ✅ 2. Ingest into Splunk
 
----
-
-### ✅ 2. Ingest into Splunk
-
 1. Go to **Settings → Add Data → Upload**
 2. Select `sample_logs.csv`
 3. Set:
