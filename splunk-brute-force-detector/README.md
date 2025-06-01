@@ -59,13 +59,12 @@ Creates a CSV file of 1000 login events with:
 
 ### ✅ 3. Detect Brute Force in SPL
 
-spl
-Copy
-Edit
+```
 index=brute_force_test sourcetype="custom:auth_logs"
 | stats count by src_ip, status
 | where status="failure" AND count > 5
 | sort -count
+```
 This query identifies any IP with more than 5 failed login attempts — a common brute-force threshold.
 
 ---
