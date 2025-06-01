@@ -40,8 +40,9 @@ splunk-brute-force-detector/
 python3 log_generator.py
 ```
 Creates a CSV file of 1000 login events with:
-✅ Normal login attempts (success/failure)
-✅ Brute-force pattern from a single IP
+
+- Normal login attempts (success/failure)
+- Brute-force pattern from a single IP
 
 ---
 
@@ -131,15 +132,12 @@ Use the following settings:
 ---
 
 ## ⚖️ Why Use Medium Severity?
-Brute-force attempts are suspicious and require triage
 
-But not always confirmed threats (e.g. scanners, login test scripts)
+- Brute-force attempts are **suspicious** and require triage  
+- But not always confirmed threats (e.g. scanners, login test scripts)  
+- Escalate to **High** if attempts increase or target multiple users
 
-Escalate to High if attempts increase or target multiple users
-
----
-
-### ✅ This alert mimics real-world SOC response logic and is ready to be expanded with notifications or scripts.
+✅ This alert mimics real-world SOC response logic and is ready to be expanded with notifications or scripts.
 
 ---
 
