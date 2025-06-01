@@ -73,13 +73,10 @@ This query identifies any IP with more than 5 failed login attempts — a common
 
 Includes four panels:
 
-Brute Force Detection by IP – Table of suspicious IPs
-
-Login Trends Over Time – Line chart (success/failure breakdown)
-
-Success vs Failure Login Breakdown – Pie chart
-
-Top Failed Login Usernames – Bar chart of targeted accounts
+1. **Brute Force Detection by IP** – Table of suspicious IPs  
+2. **Login Trends Over Time** – Line chart (success/failure breakdown)  
+3. **Success vs Failure Login Breakdown** – Pie chart  
+4. **Top Failed Login Usernames** – Bar chart of targeted accounts
 
 ---
 
