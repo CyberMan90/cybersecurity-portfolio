@@ -1,0 +1,4 @@
+index=brute_force_test sourcetype="custom:auth_logs"
+| stats count by src_ip, status
+| where status="failure" AND count > 5
+| sort -count
