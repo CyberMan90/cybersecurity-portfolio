@@ -80,7 +80,9 @@ Includes four panels:
 
 ---
 
-## 📸 Screenshot:
+## 📸 Screenshot
+
+![Brute Force Dashboard](./splunk_screenshots/dashboard.png)
 
 ---
 
