@@ -28,13 +28,7 @@ splunk-brute-force-detector/
 │   └── brute_force_detection.spl # SPL logic to detect brute-force attempts
 └── splunk_screenshots/
     └── dashboard.png             # Final Splunk dashboard screenshot
-
+```
 
 ---
 
-✅ Once you've pasted this into `README.md`, save and push it:
-
-```bash
-git add README.md
-git commit -m "Final full README with structure, SPL, alerting, and visuals"
-git push
