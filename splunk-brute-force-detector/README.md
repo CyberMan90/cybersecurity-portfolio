@@ -93,18 +93,19 @@ This project includes a Splunk alert that automatically triggers when brute-forc
 ---
 
 ## 🎯 Trigger Conditions
-More than 5 login failures from the same IP
 
-Runs every 5 minutes (via cron)
+- More than 5 login failures from the same IP  
+- Runs every 5 minutes (via cron)  
+- Time window: last 15 minutes
 
-Time window: last 15 minutes
 
 ---
 
 ## 🛠️ How to Configure
-Go to Search & Reporting → Search
 
-Paste the detection SPL:
+1. Go to **Search & Reporting → Search**
+2. Paste the detection SPL:
+
 ```
 index=brute_force_test sourcetype="custom:auth_logs"
 | stats count by src_ip, status
