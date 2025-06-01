@@ -47,17 +47,17 @@ Creates a CSV file of 1000 login events with:
 
 ### ✅ 2. Ingest into Splunk
 
-Go to Settings → Add Data → Upload
+---
 
-Select sample_logs.csv
+### ✅ 2. Ingest into Splunk
 
-Set:
-
-Source Type: custom:auth_logs
-
-Index: brute_force_test (create if needed)
-
-Confirm parsing preview, then click Submit
+1. Go to **Settings → Add Data → Upload**
+2. Select `sample_logs.csv`
+3. Set:
+   - **Source Type**: `custom:auth_logs`
+   - **Index**: `brute_force_test` (create if needed)
+4. Confirm parsing preview
+5. Click **Submit**
 
 ---
 
