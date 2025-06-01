@@ -142,13 +142,14 @@ Use the following settings:
 ---
 
 ## 🛠️ Setup (Python Environment)
-bash
-Copy
-Edit
+
+Use the commands below to create a virtual environment and install required dependencies:
+
+```
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-
+```
 ---
 
 ## 📄 License
@@ -159,6 +160,6 @@ MIT License – free to use, modify, and share.
 
 ## 👨🏽‍💻 Author
 
-CyberMan90
-GitHub: CyberMan90
+**CyberMan90**  
+GitHub: [CyberMan90](https://github.com/CyberMan90)
 
