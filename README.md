@@ -1,46 +1,54 @@
 # 🛡️ Cybersecurity Portfolio by Deon Coles
 
-Welcome to my cybersecurity project portfolio. Each project simulates real-world analyst tasks across blue team domains like network traffic analysis, log analysis, threat detection, and cloud auditing. Built hands-on to demonstrate both technical skill and security mindset.
+Welcome to my cybersecurity project portfolio. Each project simulates real-world blue team tasks across domains like threat detection, network traffic analysis, log correlation, and cloud auditing. These hands-on builds highlight both technical skills and security mindset.
 
 ---
 
 ## 📁 Projects
 
-### 1. 🕵️ Network Traffic Analysis (Wireshark)
-Captured and analyzed live packet data (DNS, TCP, HTTP, ICMP) using Wireshark.
-- ✅ Used protocol filters to isolate malicious vs. normal traffic
-- ✅ Observed TCP handshakes, DNS resolution, and ICMP ping behavior
-- ✅ Screenshots included for packet inspection and source/destination breakdown  
-🔗 [Project Folder](./network-traffic-analysis)
+### 1. 🧪 Splunk Brute Force Attack Detection  
+Detects brute-force login attempts using simulated logs and Splunk SPL.
+
+✅ Generated realistic login logs via Python (success/failure patterns)  
+✅ Detected brute-force IPs using SPL (MITRE ATT&CK T1110: Brute Force)  
+✅ Built dashboards (login trends, top failed usernames, IPs)  
+✅ Created alerting logic with thresholds, severity, and scheduling  
+🔗 [View Project](./splunk-brute-force-detector)
 
 ---
 
-### 2. 🧪 Splunk Brute Force Detection
-Simulated login logs and detected brute-force behavior using Splunk SPL.
-- ✅ Python-generated login logs (success/failure patterns)
-- ✅ Detected suspicious failed login bursts (MITRE ATT&CK T1110)
-- ✅ Created dashboards + alerts for SOC-style response  
-🔗 [Project Folder](./splunk-brute-force-detector)
+### 2. 🕵️ Network Traffic Analysis (Wireshark)  
+Captured and analyzed packet data across TCP, DNS, HTTP, and ICMP protocols.
+
+✅ Applied protocol filters to isolate normal vs. suspicious traffic  
+✅ Observed TCP 3-way handshakes, DNS resolution, and ICMP echo behavior  
+✅ Annotated screenshots showing packet headers and session details  
+🔗 [View Project](./wireshark-network-analysis)
 
 ---
 
-### 3. ☁️ Cloud Audit: AWS Config Review *(Coming Soon)*
-Using AWS CLI, Security Hub, and Config snapshots to assess S3, IAM, and EC2 security settings.
+### 3. ☁️ AWS Cloud Audit: Config + IAM Review *(Coming Soon)*  
+Using AWS CLI, Security Hub, and Config snapshots to assess security posture of cloud infrastructure.
+
+✅ Cloud resource inventory  
+✅ IAM privilege escalation check  
+✅ CIS Benchmark references
 
 ---
 
 ## 🛠️ Tools & Skills
-- Wireshark | Splunk | Python | Bash
-- Git & GitHub | Packet analysis | Detection engineering
-- MITRE ATT&CK | JSON & CSV log formats | Threat hunting logic
+
+Splunk | Wireshark | Python | Bash  
+Git & GitHub | Packet Analysis | Detection Engineering  
+MITRE ATT&CK | CSV & JSON logs | SOC Alerting Logic
 
 ---
 
 ## 🤝 Let's Connect
-- 💼 [LinkedIn](www.linkedin.com/in/deon-coles-39486232)
-- ✉️ Email: deon.l.coles@gmail.com
-- 🌐 GitHub: [CyberMan90](https://github.com/CyberMan90)
 
----
+💼 [LinkedIn](https://www.linkedin.com/in/deoncoles)  
+✉️ Email: deon.l.coles@gmail.com  
+🌐 GitHub: [CyberMan90](https://github.com/CyberMan90)
 
 > “Security isn’t just tools — it’s about knowing what to look for.”
+
