@@ -1,20 +1,20 @@
-# 🔐 Splunk Brute Force Attack Detector
+# 🛡️ Splunk Brute Force Attack Detector
 
-This project simulates brute-force login attempts and demonstrates how to detect them using **Splunk**. It includes synthetic log generation, log ingestion, SPL queries, alerts, and dashboards. Ideal for showcasing security monitoring and SIEM skills in a portfolio.
-
----
-
-## 📌 Project Overview
-
-- **Goal:** Detect brute-force login attempts based on simulated authentication logs.
-- **Tool Used:** Splunk (Free Trial)
-- **Key Skills Demonstrated:**
-  - Log generation and ingestion
-  - SPL (Search Processing Language)
-  - Alert creation
-  - Dashboard visualization
+This project simulates brute-force login attempts and detects them using **Splunk**, a leading SIEM platform. It demonstrates hands-on skills in log simulation, threat detection, SPL querying, dashboard creation, and alerting — essential for blue teamers, SOC analysts, and cybersecurity professionals.
 
 ---
 
-## 📁 Project Structure
+## 🧠 What You'll Learn
+
+- How to simulate authentication logs (Python)
+- How to ingest and normalize data in Splunk
+- How to write SPL queries for threat detection
+- How to build dashboards with actionable visuals
+- How to configure real-time alerts based on detection logic
+
+---
+
+## 🗂️ Project Structure
+
+
 
