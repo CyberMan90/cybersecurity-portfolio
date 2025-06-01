@@ -16,5 +16,25 @@ This project simulates brute-force login attempts and detects them using **Splun
 
 ## 🗂️ Project Structure
 
+```bash
+splunk-brute-force-detector/
+├── log_generator.py              # Generates 1000 simulated login events
+├── sample_logs.csv               # Output CSV (brute force + normal)
+├── requirements.txt              # Python dependencies
+├── .gitignore                    # Git tracking exclusions
+├── LICENSE                       # MIT license
+├── README.md                     # This file!
+├── search_queries/
+│   └── brute_force_detection.spl # SPL logic to detect brute-force attempts
+└── splunk_screenshots/
+    └── dashboard.png             # Final Splunk dashboard screenshot
 
 
+---
+
+✅ Once you've pasted this into `README.md`, save and push it:
+
+```bash
+git add README.md
+git commit -m "Final full README with structure, SPL, alerting, and visuals"
+git push
