@@ -46,6 +46,18 @@ Creates a CSV file of 1000 login events with:
 
 ---
 
+## 🐍 Optional: Regenerate Logs with Python
+
+If you want to generate a fresh set of login events (including simulated brute-force attempts), you can run the included Python script:
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+---
+
 ### ✅ 2. Ingest into Splunk
 
 1. Go to **Settings → Add Data → Upload**
@@ -128,7 +140,6 @@ Use the following settings:
 | Severity            | Medium                       |
 | Action              | Add to Triggered Alerts / Email |
 
-
 ---
 
 ## ⚖️ Why Use Medium Severity?
@@ -139,17 +150,6 @@ Use the following settings:
 
 ✅ This alert mimics real-world SOC response logic and is ready to be expanded with notifications or scripts.
 
----
-
-## 🛠️ Setup (Python Environment)
-
-Use the commands below to create a virtual environment and install required dependencies:
-
-```bash
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-```
 ---
 
 ## 📄 License
