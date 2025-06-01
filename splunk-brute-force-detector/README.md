@@ -38,13 +38,10 @@ splunk-brute-force-detector/
 
 ```bash
 python3 log_generator.py
-Creates a CSV file of 1000 login events with:
 ```
-### ✅ Normal login attempts (success/failure)
-
----
-
-### ✅ Brute-force pattern from a single IP
+Creates a CSV file of 1000 login events with:
+✅ Normal login attempts (success/failure)
+✅ Brute-force pattern from a single IP
 
 ---
 
@@ -114,26 +111,27 @@ Time window: last 15 minutes
 Go to Search & Reporting → Search
 
 Paste the detection SPL:
-
-spl
-Copy
-Edit
+```
 index=brute_force_test sourcetype="custom:auth_logs"
 | stats count by src_ip, status
 | where status="failure" AND count > 5
+| sort -count
+```
 Click Save As → Alert
 
 Use the following settings:
 
-Field	Value
-Title	Brute Force IP Detection
-Alert Type	Scheduled
-Time Range	Last 15 minutes
-Cron Schedule	*/5 * * * * (Every 5 mins)
-Trigger Condition	Number of results > 0
-Trigger	Once per result
-Severity	Medium
-Action	Add to Triggered Alerts / Email
+| Field               | Value                        |
+|---------------------|------------------------------|
+| Title               | Brute Force IP Detection     |
+| Alert Type          | Scheduled                    |
+| Time Range          | Last 15 minutes              |
+| Cron Schedule       | `*/5 * * * *` (Every 5 mins) |
+| Trigger Condition   | Number of results > 0        |
+| Trigger             | Once per result              |
+| Severity            | Medium                       |
+| Action              | Add to Triggered Alerts / Email |
+
 
 ---
 
