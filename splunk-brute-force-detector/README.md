@@ -60,7 +60,7 @@ Creates a CSV file of 1000 login events with:
 
 ### ✅ 3. Detect Brute Force in SPL
 
-```
+```spl
 index=brute_force_test sourcetype="custom:auth_logs"
 | stats count by src_ip, status
 | where status="failure" AND count > 5
@@ -107,7 +107,7 @@ This project includes a Splunk alert that automatically triggers when brute-forc
 1. Go to **Search & Reporting → Search**
 2. Paste the detection SPL:
 
-```
+```spl
 index=brute_force_test sourcetype="custom:auth_logs"
 | stats count by src_ip, status
 | where status="failure" AND count > 5
@@ -145,7 +145,7 @@ Use the following settings:
 
 Use the commands below to create a virtual environment and install required dependencies:
 
-```
+```bash
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
