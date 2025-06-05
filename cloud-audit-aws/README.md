@@ -154,7 +154,7 @@ This project is designed as a hands-on SOC analyst simulation. Each script refle
 
 🧠 These scripts are also expandable. You can integrate them with cron jobs, SIEM ingestion, or alerting systems as your skills grow.
 
-🔗 [Read the Security Incident Case Study](./cloud-audit-aws/incident-response.md)
+[Read the Real-World Security Incident Case Study](../cloud-audit-aws/incident-response.md)
 
 > “Cloud security isn’t just configuration… It’s verification.”
 
