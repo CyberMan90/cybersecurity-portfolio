@@ -58,7 +58,7 @@ This audit script checks for common IAM misconfigurations and insecure practices
 
 ### ⚠️ Why It Matters
 
-- **No MFA** = easy phishing target.
+- **No MFA** = high risk of phishing-based compromise.
 - **Old keys** = attack surface that’s forgotten.
 - **User enumeration** = crucial visibility for SOC triage and threat modeling.
 
@@ -154,6 +154,7 @@ This project is designed as a hands-on SOC analyst simulation. Each script refle
 
 🧠 These scripts are also expandable. You can integrate them with cron jobs, SIEM ingestion, or alerting systems as your skills grow.
 
+🛡️ This lab resulted in a real-world security incident involving exposed credentials. A follow-up investigation, CloudTrail review, and key revocation process was performed — documented in the linked incident report.
 [Read the Real-World Security Incident Case Study](../cloud-audit-aws/incident-response.md)
 
 > “Cloud security isn’t just configuration… It’s verification.”
