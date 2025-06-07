@@ -23,7 +23,7 @@ Captured and analyzed packet data across TCP, DNS, HTTP, and ICMP protocols.
 ✅ Applied protocol filters to isolate normal vs. suspicious traffic  
 ✅ Observed TCP 3-way handshakes, DNS resolution, and ICMP echo behavior  
 ✅ Annotated screenshots showing packet headers and session details  
-🔗 [View Project](./wireshark-network-analysis)
+🔗 [View Project](./network-traffic-analysis)
 
 ---
 
